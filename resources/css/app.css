@@ -1,0 +1,90 @@
+@import 'tailwindcss';
+@plugin "daisyui";
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.gradiant {
+  background: linear-gradient(95deg, #059DFF 15%, #6549D5 45%, #E33FA1 75%, #FB5343 100%) 95%/200% 100%;
+}
+
+.bg-text {
+  background: linear-gradient(95deg, #059DFF 15%, #6549D5 45%, #E33FA1 75%, #FB5343 100%) 95%/200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.custom-bg {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(-45deg, #ff6ec4, #7873f5, #4ade80, #facc15);
+  background-size: 400% 400%;
+  animation: gradientMove 15s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.wave-background {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+  overflow: hidden;
+}
+
+.wave-background::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 300px;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(
+    90deg,
+    magenta,
+    red,
+    orange,
+    yellow,
+    lime,
+    cyan,
+    blue,
+    purple
+  );
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.5;
+  animation: wavePulse 6s ease-in-out infinite;
+}
+
+@keyframes wavePulse {
+  0% {
+    transform: translate(-50%, -50%) scaleX(1) rotate(0deg);
+  }
+  50% {
+    transform: translate(-50%, -50%) scaleX(1.2) rotate(2deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) scaleX(1) rotate(0deg);
+  }
+}
