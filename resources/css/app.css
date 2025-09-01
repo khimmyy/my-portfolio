@@ -26,7 +26,7 @@
 }
 .custom-bg {
   margin: 0;
-  height: 100vh;
+  height: fit-content;
   background: linear-gradient(-45deg, #ff6ec4, #7873f5, #4ade80, #facc15);
   background-size: 400% 400%;
   animation: gradientMove 15s ease infinite;
@@ -87,4 +87,22 @@
   100% {
     transform: translate(-50%, -50%) scaleX(1) rotate(0deg);
   }
+}
+.text-gradient {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fade-in 1s ease-out forwards;
+}
+
+@keyframes slide-in {
+  from { opacity: 0; transform: translateX(-50px); }
+  to { opacity: 1; transform: translateX(0); }
 }
