@@ -13,7 +13,7 @@ class ProjectCard extends Component
     public $tech;   
     public $link;
 
-public function __construct($title, $description, $tech, $link)
+public function __construct( $title, $description, $tech, $link)
 {
     $this->title = $title;
     $this->description = $description;

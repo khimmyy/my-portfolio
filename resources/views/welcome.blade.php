@@ -37,9 +37,10 @@
                   <div class="h-full xl:w-[50%] md:w-[60%] sm:w-[70%] w-full text-white flex flex-col gap-2 justify-center">
                       <h1 class="xl:text-7xl lg:text-6xl md:text-5xl text-4xl font-semibold">Hi there, I am</h1>
                         <h1 class="xl:text-7xl lg:text-6xl md:text-5xl text-4xl font-semibold bg-text">Khimberly Khate Fontanilla!</h1>
-                            <div class="h-[3%] xl:w-[50%] md:w-[60%] sm:w-[70%] w-full text-white flex flex-col gap-2 justify-center">
+                            <div class="h-auto xl:w-[50%] md:w-[60%] sm:w-[70%] w-full text-white flex flex-col gap-2 justify-center">
                               <!--Typewriting part-->  
-                              <h2 id="typewriter" class="text-4xl font-bold"></h2>
+                              <h2 id="typewriter" class="xl:text-5xl lg:text-4xl md:text-3xl sm:text-2xl text-xl font-bold"></h2>
+                              </h2>
                             </div>
 
                                 <!-- Typewriter Effect Script -->
@@ -104,21 +105,35 @@
    
         <!--About Me Section-->
         <section id="about" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-100">
-            <div class="max-w-7xl mx-auto">
-                <h2 class="text-3xl font-bold mb-6 text-center">About Me</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                    <div>
-                          <div class="flex justify-center md:justify-start mb-6">
-                              <img src="{{ asset('images/profile.jpg') }}" alt="Profile Picture" 
-                            class="w-72 h-auto rounded shadow-lg opacity-0 animate-fade-in" />
-                    </div>
-                    </div>
-                    <div>
-                        <p class="text-lg mb-4">Hello! I'm Khimberly Khate Fontanilla, a passionate web and mobile developer with experience in creating dynamic and responsive applications. I specialize in Laravel for backend development and have a strong foundation in front-end technologies like HTML, CSS, and JavaScript. I also have experience in Android app development.</p>
-                        <p class="text-lg mb-4">I love turning ideas into reality through code and am always eager to learn new technologies and improve my skills. When I'm not coding, I enjoy graphic design and video editing, which allows me to express my creativity in different ways.</p>
-                        <p class="text-lg">Feel free to explore my projects below and reach out if you'd like to collaborate or learn more about my work!</p>
-                    </div>
-                </div>
+  <div class="max-w-7xl mx-auto">
+    <h2 class="text-4xl font-extrabold text-center text-gray-800 mb-12">About Me</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <!-- Profile Image -->
+      <div class="flex justify-center md:justify-start">
+        <img src="{{ asset('images/profile.jpg') }}" alt="Profile Picture"
+          class="w-72 h-72 object-cover rounded-full shadow-xl transform hover:scale-105 transition duration-500 ease-in-out opacity-0 animate-fade-in" />
+      </div>
+
+      <!-- Description -->
+      <div class="text-gray-700 space-y-6">
+        <p class="text-lg leading-relaxed text-justify">
+          I’m a <span class="font-semibold text-blue-600">versatile and driven developer</span> with a strong foundation in both frontend and backend technologies. My expertise spans modern frameworks like <span class="font-medium text-gray-900">React.js</span>, <span class="font-medium text-gray-900">Laravel</span>, and <span class="font-medium text-gray-900">Node.js</span>, enabling me to build dynamic web applications with clean architecture and responsive design.
+        </p>
+
+        <p class="text-lg leading-relaxed text-justify">
+          I’m proficient in <span class="font-medium text-gray-900">TypeScript</span>, <span class="font-medium text-gray-900">JavaScript</span>, <span class="font-medium text-gray-900">HTML</span>, and <span class="font-medium text-gray-900">CSS</span>, and I bring a thoughtful approach to UI/UX design using tools like <span class="font-medium text-gray-900">Figma</span> and <span class="font-medium text-gray-900">AdobeXD</span>.
+        </p>
+
+        <p class="text-lg leading-relaxed text-justify">
+          I also have hands-on experience in mobile app development using <span class="font-medium text-gray-900">Android Studio</span> and <span class="font-medium text-gray-900">XML</span>, and I’ve worked with <span class="font-medium text-gray-900">Firebase</span> for real-time data and authentication. My backend toolkit includes <span class="font-medium text-gray-900">SQL</span>, <span class="font-medium text-gray-900">NoSQL</span>, and <span class="font-medium text-gray-900">MongoDB</span>.
+        </p>
+
+        <p class="text-lg leading-relaxed text-justify">
+          I’m confident navigating both technical and business environments, with working knowledge of <span class="font-medium text-gray-900">SAP Business One ERP</span>. Whether I’m debugging code, designing interfaces, or collaborating with a team, I bring strong <span class="font-semibold text-blue-600">communication</span>, <span class="font-semibold text-blue-600">leadership</span>, and <span class="font-semibold text-blue-600">analytical thinking</span> to every project.
+        </p>
+      </div>
+    </div>
                 <div class="mt-6 pb-16 lg:pb-0 w-4/5 lg:w-full mx-auto flex flex-wrap items-center justify-between">
                         <img src  ="{{ asset('images/html5.png') }}" alt="HTML"  class="h-15 fill-current text-gray-600 hover:text-green-700" />
                         <img src  ="{{ asset('images/css.png') }}" alt="CSS"  class="h-15 fill-current text-gray-600 hover:text-green-700" />
@@ -140,32 +155,32 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 <x-project-card 
                     title="Website Development Portfolio" 
-                    description="A personal portfolio built with Laravel and Tailwind CSS." 
-                    :tech="['Laravel', 'Tailwind', 'Blade']" 
+                    description="A personal portfolio built with the web development languages I learned." 
+                    :tech="['HTML','CSS','Laravel', 'Tailwind', 'Blade']" 
                     link="/webdevelopment"
                 />
                 <x-project-card 
                     title="Android App Development" 
-                    description="A CRUD-based task manager with user authentication." 
-                    :tech="['Laravel', 'MySQL', 'Livewire']" 
+                    description="A personal portfolio showcasing the mobile application made on Android Studio." 
+                    :tech="['XML', 'JavaScript', 'Database']" 
                     link="/webdevelopment"
                 />
                   <x-project-card 
                     title="Graphics Design Portfolio" 
-                    description="A CRUD-based task manager with user authentication." 
-                    :tech="['Laravel', 'MySQL', 'Livewire']" 
+                    description="A portfolio showcasing my personal or school purposes graphic design works." 
+                    :tech="['Canva', 'Adobe']" 
                     link="https://github.com/khimberly/task-manager" 
                 /> 
                   <x-project-card 
                     title="Video Editing Portfolio" 
-                    description="A CRUD-based task manager with user authentication." 
-                    :tech="['Laravel', 'MySQL', 'Livewire']" 
+                    description="A portfolio showcasing my personal, freelancing, or school purposes video editing works." 
+                    :tech="['Premeire Pro', 'Capcut', 'Sony Vegas Pro']" 
                     link="https://github.com/khimberly/task-manager" 
                 />
                   <x-project-card 
                     title="Photo Editing Portfolio" 
-                    description="A CRUD-based task manager with user authentication." 
-                    :tech="['Laravel', 'MySQL', 'Livewire']" 
+                    description="A page showcasing my photo taken and also edited pictures for my personal social media accounts." 
+                    :tech="['Photoshop', 'Lightroom', 'Livewire']" 
                     link="https://github.com/khimberly/task-manager" 
                 />
             </div>
